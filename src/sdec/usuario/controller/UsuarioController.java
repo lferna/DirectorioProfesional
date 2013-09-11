@@ -1,4 +1,4 @@
-package sdec;
+package sdec.usuario.controller;
 
 import java.io.IOException;
 
@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import sdec.Calculadora;
+
 //Es un servlet controlado por el Spring MVC, sustituto por ejemplo de Struts
 @Controller
-public class CalculadoraServlet {
+public class UsuarioController {
 
  // Aquí está la magia !! Con poner @autowired, spring inyecta automáticamente aquí nuestro bean con el servicio !!
  // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !!
