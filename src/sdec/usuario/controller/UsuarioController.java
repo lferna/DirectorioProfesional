@@ -15,7 +15,8 @@ import sdec.usuario.model.UsuarioModel;
 public class UsuarioController {
 
  // Aquí está la magia !! Con poner @autowired, spring inyecta automáticamente aquí nuestro bean con el servicio !!
- // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !!
+ // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !! priobando
+	
  @Autowired
  private UsuarioModel usuarioModel;
  
