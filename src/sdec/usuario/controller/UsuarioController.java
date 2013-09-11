@@ -22,6 +22,7 @@ public class UsuarioController {
  @RequestMapping("calcula.do")
  public void calcula(HttpServletResponse response) throws IOException {
   // Devolvemos la suma gracias al servicio mágico que hemos definido en el applicationContext.xml:)
+	 //as
   response.getOutputStream().println("El resultado de la llamada al servicio es : " + servicioCalculadora.sumar(23, 66));
  }
 }
