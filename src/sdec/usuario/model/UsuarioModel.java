@@ -1,8 +1,8 @@
-package sdec;
+package sdec.usuario.model;
 
-public class Calculadora {
+public class UsuarioModel {
  
- public Calculadora() {
+ public UsuarioModel() {
   System.out.println("Calculadora inicializada por Spring !!");
  }
 

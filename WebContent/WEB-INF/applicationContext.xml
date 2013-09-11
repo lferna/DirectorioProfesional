@@ -16,6 +16,6 @@
  <context:annotation-config />
  <context:component-scan base-package="sdec" />
 
- <bean id="servicioCalculadora" class="sdec.Calculadora"/>
+ <bean id="usuarioModel" class="sdec.usuario.model.UsuarioModel"/>
  
 </beans>
