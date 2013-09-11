@@ -16,7 +16,7 @@ public class UsuarioController {
 
  // Aquí está la magia !! Con poner @autowired, spring inyecta automáticamente aquí nuestro bean con el servicio !!
  // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !! priobando
-	//otra prueba
+	//otra prueba vamos a ver
 	
  @Autowired
  private UsuarioModel usuarioModel;
