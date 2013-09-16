@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import sdec.usuario.model.UsuarioModel;
 
-//Es un servlet controlado por el Spring MVC, sustituto por ejemplo de Struts
-@Controller
-public class UsuarioController extends IUsuarioController{
+
+public abstract class IUsuarioController {
 
  // Aquí está la magia !! Con poner @autowired, spring inyecta automáticamente aquí nuestro bean con el servicio !!
  // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !! priobando
@@ -21,9 +20,7 @@ public class UsuarioController extends IUsuarioController{
  @Autowired
  private UsuarioModel usuarioModel;
  
- public void login(HttpServletResponse response) throws IOException {
-  // Devolvemos la suma gracias al servicio mágico que hemos definido en el applicationContext.xml:)
-	 //as
-  response.getOutputStream().println("El resultado de la llamada al servicio es : " + usuarioModel.sumar(23, 66));
- }
+ @RequestMapping("login.htm")
+ public abstract void login(HttpServletResponse response) throws IOException;
+ 
 }
