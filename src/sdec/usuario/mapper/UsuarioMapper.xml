@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sdec.usuario.mapper.UsuarioMapper">
+
+  <select id="login" parameterType="string" resultType="sdec.usuario.domain.Usuario">
+    SELECT
+          USERNAME,
+          NOMBRE,
+          APELLIDOS
+    FROM USUARIOS
+    WHERE USERNAME = #{username}
+  </select>
+
+  <insert id="registro" parameterType="sdec.usuario.domain.Usuario">
+    INSERT INTO USUARIOS (USERNAME,NOMBRE,APELLIDOS)
+    VALUES (#{userName}, #{nombre}, #{apellidos})
+  </insert>
+</mapper>
