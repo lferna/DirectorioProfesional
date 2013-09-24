@@ -1,14 +1,18 @@
 package sdec.usuario.controller;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import sdec.usuario.domain.Usuario;
 import sdec.usuario.model.UsuarioModel;
 import sdec.usuario.service.UsuarioService;
+import sdec.usuario.utils.UsuarioUtils;
 
 /**
  * Clase muy importante, el Controlador (Spring), más conocida como Action (Struts) o 
@@ -35,18 +39,21 @@ public class UsuarioController extends IUsuarioController{
  private UsuarioService usuarioService;
  
  public void login(HttpServletResponse response) throws IOException {
-  // Devolvemos la suma gracias al servicio mágico que hemos definido en el applicationContext.xml:)
-	 //as
-  response.getOutputStream().println("El resultado de la llamada al servicio es : " + usuarioModel.sumar(23, 66));
 
-  //lo tengo comentado porque fallaría ahora, descomentarlo cuando todo esté listo.
-  //usuarioService.login("usuario", "password");
+	 
+	 String password = UsuarioUtils.encryptSha("luis");
+	 String username = "luis";
+	 
+	 Usuario usuario = usuarioService.login("luis", "luis");
+	 
+  
  }
  
  public void registro(HttpServletResponse response) throws IOException {
 
-	  //lo tengo comentado porque fallaría ahora, descomentarlo cuando todo esté listo.
-	  //usuarioService.registro("....");
+	  	String username = "luis";
+	  	String password = "luis";
+	 	//usuarioService.registro(username,password,nombre,apellidos);
 	 }
 
 }

@@ -5,12 +5,10 @@
 <mapper namespace="sdec.usuario.mapper.UsuarioMapper">
 
   <select id="login" parameterType="string" resultType="sdec.usuario.domain.Usuario">
-    SELECT
-          USERNAME,
-          NOMBRE,
-          APELLIDOS
-    FROM USUARIOS
-    WHERE USERNAME = #{username}
+    SELECT username
+    		, nombre
+		FROM usuarios
+		WHERE username LIKE #{userName}
   </select>
 
   <insert id="registro" parameterType="sdec.usuario.domain.Usuario">

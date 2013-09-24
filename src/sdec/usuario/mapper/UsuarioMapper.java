@@ -15,7 +15,7 @@ import sdec.usuario.domain.Usuario;
  */
 public interface UsuarioMapper {
 
-  Usuario login(String username, String password);
+  Usuario login(String username);
   
   void registro (Usuario usuario);
 

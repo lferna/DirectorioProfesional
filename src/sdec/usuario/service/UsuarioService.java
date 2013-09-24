@@ -21,7 +21,10 @@ public class UsuarioService {
   private UsuarioMapper usuarioMapper;
 
   public Usuario login(String username, String password) {
-    return usuarioMapper.login(username, password);	
+	Usuario usuario = new Usuario();
+	usuario.setUsername(username);
+	usuario.setPassword(password);
+    return usuarioMapper.login(username);	
   }
   
   public void registro(Usuario usuario) {

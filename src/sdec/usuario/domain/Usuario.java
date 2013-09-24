@@ -1,5 +1,7 @@
 package sdec.usuario.domain;
 
+
+
 /**
  * Clase que implementa el dominio, básicamente el VO (Value Object) o POJO
  * donde irán los campos de la clase, todos privados con accesos mediante getters
@@ -16,13 +18,24 @@ public class Usuario {
 	private String username;
 	private String nombre;
 	private String apellidos;
+	private String password;
 
 	
 	public Usuario() {
 		username="";
 		nombre="";
-		apellidos="";		
+		apellidos="";	
+		password="";
 	 }
+	
+	
+	public String getPassword() {		
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getUsername() {
 		return username;
