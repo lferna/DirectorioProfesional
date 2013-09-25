@@ -51,8 +51,13 @@ public class UsuarioController extends IUsuarioController{
  
  public void registro(HttpServletResponse response) throws IOException {
 
-	  	String username = "luis";
-	  	String password = "luis";
+	  	String password = UsuarioUtils.encryptSha("luis");
+	  	Usuario usuario = new Usuario();
+	  	usuario.setUsername("luis");
+	  	usuario.setPassword(password);
+	  	usuario.setNombre("nombre");
+	  	usuario.setApellidos("apellidos");
+	  	
 	 	//usuarioService.registro(username,password,nombre,apellidos);
 	 }
 

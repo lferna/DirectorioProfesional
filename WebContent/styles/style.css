@@ -1,0 +1,253 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+}
+p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-bottom: 9px;
+}
+p small {
+    color: #BFBFBF;
+    font-size: 11px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #404040;
+    font-weight: bold;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #BFBFBF;
+}
+h1 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 18px;
+	color: #1D4C55;
+}
+h1 small {
+    font-size: 18px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h2 small {
+    font-size: 14px;
+}
+h3, h4, h5, h6 {
+    line-height: 36px;
+}
+h3 {
+    font-size: 18px;
+}
+h3 small {
+    font-size: 14px;
+}
+h4 {
+    font-size: 16px;
+}
+h4 small {
+    font-size: 12px;
+}
+h5 {
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5 p, a, address, code, del, em, img, q, s, small, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, form, label, button, table, thead, tr, th, td {
+    border: 0 none;
+    font-family: inherit;
+
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    margin: 0 0 18px 25px;
+}
+ul {
+    list-style: disc outside none;
+}
+li {
+    color: #808080;
+    line-height: 18px;
+}
+
+div.wrapper {
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    margin: -30 auto;
+    padding: 15px 0 0;
+    width: 980px;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+.row {
+    margin-left: -20px;
+}
+.row > [class*="span"] {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+.span3 {
+    width: 160px;
+}
+#pagination a.selected {
+    background-color: #EEDC94;
+    color: black;
+}
+ul#categories li.selected, ul#tags li.selected, ul#type li.selected {
+    text-decoration: underline;
+}
+ul#categories li.selected a, ul#tags li.selected a, ul#type li.selected a {
+    color: black !important;
+}
+#pagination span {
+    color: gray;
+    font-size: 12px;
+}
+ul#categories li span, ul#tags li span, ul#type li span {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #AAAAAA;
+    font-size: 0.8em;
+    margin-left: 5px;
+    padding: 1px 3px;
+}
+.span10 {
+    width: 580px;
+}
+
+div.professionals_list, div.ofertas_list {
+    clear: both;
+    margin-top: 20px;
+}
+.pagination .disabled a, .pagination .disabled a:hover {
+    background-color: transparent;
+    color: #BFBFBF;
+}
+#pagination a {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #AAAAAA;
+    margin: 1px;
+    padding: 1px 5px;
+}
+ul#professionals, ul#ofertas {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+ul#professionals > li, ul#ofertas > li {
+    clear: both;
+    font-size: 90%;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+ul#professionals > li , ul#ofertas > li {
+    border: 2px solid #E2E2E2;
+    margin-bottom: 10px;
+    padding: 10px 15px 15px;
+}
+ul#professionals > li img {
+    float: left;
+}
+ul#professionals > li img.avatar {
+    border: 2px solid #E2E2E2;
+    margin-right: 10px;
+    max-height: 40px;
+    max-width: 40px;
+}
+ul#professionals li .bio, ul#ofertas li .bio {
+    color: #333333;
+	display: block;
+    margin-left: 25px;
+    margin-top: 4px;
+}
+ul#professionals li .title, ul#ofertas li .title {
+    color: #333333;
+	display: block;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+ul#ofertas li .location, ul#ofertas li .email, ul#ofertas li .company{
+    color: #666666;
+    display: block;
+    margin-left: 25px;
+    margin-top: 4px;
+}
+input, textarea, select, .uneditable-input {
+    border: 1px solid #636876;
+    border-radius: 3px 3px 3px 3px;
+    color: #636876;
+    display: inline-block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    padding: 4px;
+    width: 210px;
+}
+.uneditable-input {
+    background-color: #FFFFFF;
+    border-color: #EEEEEE;
+    cursor: not-allowed;
+    display: block;
+}
+body {
+    background-color: #8FA8B4;
+    color: #404040;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0;
+	font: 14px Helvetica,Arial,sans-serif;
+    padding-top: 100px;
+}
+.body h3 {
+    border-bottom: 1px dotted #28889F;
+    color: #FF7762;
+    font-size: 1.5em !important;
+    margin-bottom: 10px !important;
+}
+
+ul#professionals li .location, ul#professionals li .user_tags, ul#professionals li .email {
+    color: #666666;
+    display: block;
+    margin-left: 50px;
+    margin-top: 4px;
+	font-family: sans-serif;
+}
+ul#professionals li .user_tags span {
+    color: black;
+}
+
+input#log {
+    height: 25px;
+    margin-top: 30px;
+	margin-bottom: 10px;
+	float: left;
+	margin-left: 40px;
+	background-color: #FFFFFF;
+}
+
+input#reg {
+    height: 25px;
+	margin-left: 40px;
+	background-color: #FFFFFF;
+}
