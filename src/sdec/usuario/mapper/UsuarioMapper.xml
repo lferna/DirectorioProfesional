@@ -12,7 +12,7 @@
   </select>
 
   <insert id="registro" parameterType="sdec.usuario.domain.Usuario">
-    INSERT INTO USUARIOS (USERNAME,NOMBRE,APELLIDOS)
-    VALUES (#{userName}, #{nombre}, #{apellidos})
+    INSERT INTO USUARIOS (USERNAME,NOMBRE,APELLIDOS,PASSWORD)
+    VALUES (#{userName}, #{nombre}, #{apellidos}, #{password})
   </insert>
 </mapper>

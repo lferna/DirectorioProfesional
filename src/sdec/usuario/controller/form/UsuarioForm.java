@@ -5,6 +5,7 @@ public class UsuarioForm {
 	private String username;
 	private String nombre;
 	private String apellidos;
+	private String email;
 	private String password;
 	
 	public UsuarioForm(){
@@ -12,6 +13,15 @@ public class UsuarioForm {
 		nombre = "";
 		apellidos = "";
 		password = "";
+		email = "";
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getUsername() {

@@ -1,16 +1,15 @@
 package sdec.usuario.controller;
 
 import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
 
+import sdec.usuario.controller.form.UsuarioForm;
 import sdec.usuario.domain.Usuario;
-import sdec.usuario.model.UsuarioModel;
 import sdec.usuario.service.UsuarioService;
 import sdec.usuario.utils.UsuarioUtils;
 
@@ -32,13 +31,11 @@ public class UsuarioController extends IUsuarioController{
  // No hay que preocuparse de inicializarlo ni gestionarlo ni nada parecido !! priobando
 	//otra prueba vamos a ver
 	
- @Autowired
- private UsuarioModel usuarioModel; //a eliminar en un futuro
  
  @Autowired
  private UsuarioService usuarioService;
  
- public void login(HttpServletResponse response) throws IOException {
+ public ModelAndView login(HttpServletResponse response) throws IOException {
 
 	 
 	 String password = UsuarioUtils.encryptSha("luis");
@@ -46,19 +43,33 @@ public class UsuarioController extends IUsuarioController{
 	 
 	 Usuario usuario = usuarioService.login("luis", "luis");
 	 
-  
+	 return new ModelAndView("usuario/index");     
  }
  
- public void registro(HttpServletResponse response) throws IOException {
+ public ModelAndView initLogin(HttpServletResponse response) throws IOException {
+	 return new ModelAndView("usuario/login");     
+ }
+ 
+ 
+ public ModelAndView initRegistro(HttpServletResponse response) throws IOException {
+	 UsuarioForm usuarioForm = new UsuarioForm();
+	 ModelAndView model = new ModelAndView();
+	 model.addObject(usuarioForm);
+	 model.setViewName("usuario/registro");
+	 return model;
+ }
+ 
+ public ModelAndView registro(HttpServletResponse response, UsuarioForm usuarioForm) throws IOException {
 
-	  	String password = UsuarioUtils.encryptSha("luis");
+	  	String password = UsuarioUtils.encryptSha(usuarioForm.getPassword());
 	  	Usuario usuario = new Usuario();
-	  	usuario.setUsername("luis");
+	  	usuario.setUsername(usuarioForm.getUsername());
 	  	usuario.setPassword(password);
-	  	usuario.setNombre("nombre");
-	  	usuario.setApellidos("apellidos");
+	  	usuario.setNombre(usuarioForm.getNombre());
+	  	usuario.setApellidos(usuarioForm.getApellidos());
 	  	
-	 	//usuarioService.registro(username,password,nombre,apellidos);
+	 	usuarioService.registro(usuario);
+	  	return new ModelAndView("usuario/registroOk");
 	 }
 
 }

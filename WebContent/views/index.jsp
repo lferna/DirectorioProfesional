@@ -40,10 +40,10 @@
 						</li>
 						
 						<li class="floatR">
-							<a href="./Registrarse.html">Registrarse</a>
+							<a href="usuario/initRegistro.htm">Registrarse</a>
 						</li>
 						<li class="floatR">
-							<a href="./IniciarSesion.html">Iniciar sesión</a>
+							<a href="usuario/initLogin.htm">Iniciar sesión</a>
 						</li>
 					</ul>
 				</nav>

@@ -5,9 +5,12 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
 
+import sdec.usuario.controller.form.UsuarioForm;
 import sdec.usuario.model.UsuarioModel;
 
 /**
@@ -20,6 +23,7 @@ import sdec.usuario.model.UsuarioModel;
  *
  */
 @RequestMapping("usuario/")
+@SessionAttributes("usuarioForm")
 public abstract class IUsuarioController {
 
 	
@@ -27,9 +31,15 @@ public abstract class IUsuarioController {
  private UsuarioModel usuarioModel;
  
  @RequestMapping("login.htm")
- public abstract void login(HttpServletResponse response) throws IOException;
+ public abstract ModelAndView login(HttpServletResponse response) throws IOException;
  
  @RequestMapping("registro.htm")
- public abstract void registro(HttpServletResponse response) throws IOException;
+ public abstract ModelAndView registro(HttpServletResponse response, @ModelAttribute("usuarioForm")UsuarioForm usuarioForm) throws IOException;
+ 
+ @RequestMapping("initRegistro.htm")
+ public abstract ModelAndView initRegistro(HttpServletResponse response) throws IOException;
+
+ @RequestMapping("initLogin.htm")
+ public abstract ModelAndView initLogin(HttpServletResponse response) throws IOException;
  
 }

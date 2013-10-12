@@ -11,4 +11,5 @@
 
   <!-- Busca todos los controllers (como servlets) con anotaciones como @Controller, @Request, etc-->
  <context:component-scan base-package="sdec" />
+ 
 </beans>
