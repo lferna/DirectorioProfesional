@@ -7,6 +7,7 @@ public class UsuarioForm {
 	private String apellidos;
 	private String email;
 	private String password;
+    //...localidad, pais...
 	
 	public UsuarioForm(){
 		username = "";

@@ -59,7 +59,10 @@
 					<h1 align="center">Registrarse</h1>
 					<form action="registro.htm" name="usuarioForm" method="post">
 						<p>
-							<input type="text" placeholder="Nombre y Apellidos" name="username"  id="reg" required="required">
+							<input type="text" placeholder="Nombre de usuario" name="username"  id="reg" required="required">
+						</p>
+						<p>
+							<input type="text" placeholder="Nombre" name="nombre"  id="reg" required="required">
 						</p>
 						<p>
 							<input type="text" placeholder="Email" name="email"  id="reg" required="required">

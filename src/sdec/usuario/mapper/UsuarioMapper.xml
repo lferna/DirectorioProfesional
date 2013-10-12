@@ -6,13 +6,13 @@
 
   <select id="login" parameterType="string" resultType="sdec.usuario.domain.Usuario">
     SELECT username
-    		, nombre
 		FROM usuarios
 		WHERE username LIKE #{userName}
+		AND password = #{password}
   </select>
 
   <insert id="registro" parameterType="sdec.usuario.domain.Usuario">
-    INSERT INTO USUARIOS (USERNAME,NOMBRE,APELLIDOS,PASSWORD)
-    VALUES (#{userName}, #{nombre}, #{apellidos}, #{password})
+    INSERT INTO USUARIOS (USERNAME,NOMBRE,PASSWORD)
+    VALUES (#{username}, #{nombre}, #{password})
   </insert>
 </mapper>
