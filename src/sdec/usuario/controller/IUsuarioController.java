@@ -4,14 +4,12 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import sdec.usuario.controller.form.UsuarioForm;
-import sdec.usuario.model.UsuarioModel;
 
 /**
  * Interfaz del controlador, muy importante también. Aquí están las redirecciones que se hacen.
@@ -27,8 +25,6 @@ import sdec.usuario.model.UsuarioModel;
 public abstract class IUsuarioController {
 
 	
- @Autowired 
- private UsuarioModel usuarioModel;
  
  @RequestMapping("login.htm")
  public abstract ModelAndView login(HttpServletResponse response) throws IOException;
